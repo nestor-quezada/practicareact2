@@ -2,10 +2,10 @@ import React from 'react';
 
 const useroutput = ( props ) => {
     return (
-        <div className="container">
-            <p  type="text">{props.username}</p>
-            <p  type="text">{props.valor2}</p>
-        </div>
+        <li className="list-group-item">
+            <p>{props.username}</p>
+            <p>{props.valor2}</p>
+        </li>
     )
 };
 

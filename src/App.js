@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './bootstrap.min.css';
 import Useroutput from './User/UserOutput';
 import Userinput from './User/UserInput';
 
@@ -28,9 +29,14 @@ class App extends Component {
     return (
       <div className="App">
         <Userinput changed={this.handleChange} valor={this.state.useroutputs[2].username}/>
-        <Useroutput username={this.state.useroutputs[0].username} valor2="parrafo 2"></Useroutput>
-        <Useroutput username={this.state.useroutputs[1].username} valor2="parrafo 2"></Useroutput>
-        <Useroutput username={this.state.useroutputs[2].username} valor2="parrafo 2"></Useroutput>
+
+        <ul className="list-group list-group-flush">
+        
+          <Useroutput username={this.state.useroutputs[0].username} valor2="parrafo 2"></Useroutput>
+          <Useroutput username={this.state.useroutputs[1].username} valor2="parrafo 2"></Useroutput>
+          <Useroutput username={this.state.useroutputs[2].username} valor2="parrafo 2"></Useroutput>
+
+        </ul>
       </div>
     );
   }
